@@ -5,22 +5,16 @@ class Solution(object):
         :type t: str
         :rtype: bool
         """
-        result = True
         replaceDict = {}
-        revDict = {}
         for i in range(len(s)):
             if s[i] in replaceDict.keys():
                 if t[i] != replaceDict[s[i]]:
-                    result = False
-                    break
+                    return False
             else:
-                if t[i] in revDict.keys():
-                    if s[i] != revDict[t[i]]:
-                        result = False
-                        break
+                if t[i] in replaceDict.values():
+                    return False
                 replaceDict[s[i]] = t[i]
-                revDict[t[i]] = s[i]
-        return result
+        return True
 
 
 if __name__ == '__main__':
