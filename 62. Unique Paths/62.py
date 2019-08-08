@@ -16,7 +16,7 @@ class Solution(object):
                 else:
                     r.append(r[j - 1] + rslt[i - 1][j])
             rslt.append(r)
-        return rslt[m-1][n-1]
+        return rslt[m - 1][n - 1]
 
 
 if __name__ == '__main__':

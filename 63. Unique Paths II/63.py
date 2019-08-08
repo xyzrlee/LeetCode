@@ -13,9 +13,9 @@ class Solution(object):
                 elif i == 0 and j == 0:
                     r.append(1)
                 elif i == 0:
-                    r.append(r[j-1])
+                    r.append(r[j - 1])
                 elif j == 0:
-                    r.append(rslt[i-1][j])
+                    r.append(rslt[i - 1][j])
                 else:
                     r.append(r[j - 1] + rslt[i - 1][j])
             rslt.append(r)
